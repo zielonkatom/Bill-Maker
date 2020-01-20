@@ -1,0 +1,37 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+
+<p> Welcome to the Bill Maker App. Please proceed to creating a bill. </p>
+<b> <font size="5"> STARTERS </font>  </b> <br>
+{% for prod in starters %}
+	{{ prod.id }}. <b> {{ prod.name }} </b>  &emsp;&emsp;&emsp; <b> {{ prod.price }} </b> <a href=/add/{{ prod.id }}> + </a>  <br>
+	<i> {{ prod.short_description }} </i> <br> <br>
+{% endfor %}
+
+<b><font size="5"> MAINS</font> </b> <br>
+{% for prod in mains %}
+	{{ prod.id }}. <b> {{ prod.name }} </b>  &emsp;&emsp;&emsp; <b> {{ prod.price }} </b> <a href=/add/{{ prod.id }}> + </a> <br>
+	<i> {{ prod.short_description }} </i> <br> <br>
+{% endfor %}
+
+<b><font size="5"> DESSERTS </font></b> <br>
+{% for prod in desserts %}
+	{{ prod.id }}. <b> {{ prod.name }} </b>  &emsp;&emsp;&emsp; <b> {{ prod.price }} </b> <a href=/add/{{ prod.id }}> + </a> <br>
+	<i> {{ prod.short_description }} </i> <br> <br>
+{% endfor %}
+
+<b><font size="5"> DRINKS </font></b> <br>
+{% for prod in drinks %}
+	{{ prod.id }}. <b> {{ prod.name }} </b>  &emsp;&emsp;&emsp; <b> {{ prod.price }} </b> <a href=/add/{{ prod.id }}> + </a> <br>
+	<i> {{ prod.short_description }} </i> <br> <br>
+{% endfor %}
+
+<b><font size="5"> SUMMARY </font></b> <br>
+{% for prod in summary %}
+	{{ prod.id }}. <b> {{ prod.name }} </b>  &emsp;&emsp;&emsp; <b> {{ prod.price }} </b> <a href=/add/{{ prod.id }}> + </a> <br>
+	<i> {{ prod.short_description }} </i> <br> <br>
+{% endfor %}
+
+
+{% endblock %}
